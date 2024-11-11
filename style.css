@@ -14,6 +14,7 @@ body {
   position: relative;
 }
 
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -21,6 +22,35 @@ body::-webkit-scrollbar {
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Additional adjustments for smaller screens */
+@media screen and (max-width: 700px) {
+  .video1, .chart {
+    max-width: 90%; /* Ensure these elements don’t exceed the viewport width */
+  }
+
+  .wrapper {
+    position: relative; /* Ensures the wrapper adapts to screen changes */
+  }
+
+  .topbar {
+    flex-direction: column; /* Stack topbar items on smaller screens */
+  }
+
+  .example, .text-box {
+    width: 90%; /* Constrain the width of text boxes */
+    font-size: 1em; /* Make text size smaller for readability on small screens */
+  }
 }
 
 .bord {
