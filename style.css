@@ -33,23 +33,31 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* Additional adjustments for smaller screens */
+/* Mobile Responsiveness */
 @media screen and (max-width: 700px) {
-  .video1, .chart {
-    max-width: 90%; /* Ensure these elements don’t exceed the viewport width */
-  }
-
-  .wrapper {
-    position: relative; /* Ensures the wrapper adapts to screen changes */
-  }
-
   .topbar {
-    flex-direction: column; /* Stack topbar items on smaller screens */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
   }
 
-  .example, .text-box {
-    width: 90%; /* Constrain the width of text boxes */
-    font-size: 1em; /* Make text size smaller for readability on small screens */
+  .logo {
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .example {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buy-button {
+    font-size: 1em;
+    padding: 8px 16px;
+    width: 100%;
+    margin-top: 10px;
   }
 }
 
