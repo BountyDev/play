@@ -1,8 +1,12 @@
+@font-face {
+  font-family: 'customfont'; /* Name of the font */
+  src: url('font.otf') format('opentype');
+}
+
 body {
-  background-color: rgb(48, 36, 23);
-  background-image: url('borderpattern.svg');
-  background-size: 100px 100px;
+  background-color: rgba(13,13,13, 1);
   margin: 0;
+
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
@@ -15,42 +19,53 @@ body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
+
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-@font-face {
-  font-family: 'cambriafnt';
-  src: url('Cambria.ttf');
-}
-
-.logo {
-  margin-left: 15px;
+.bord {
   height: 50px;
-  margin-top: 15px;
-  display: absolute;
+  background-image: url()
+}
+.logo {
+  margin-left: 2%;
+  height: 50px;
 }
 
 .e {
   text-decoration: none;
-  color: rgba(251, 176, 64,255);
-  font-style: italic;
-  font-weight: normal;
+  color: #d9d9d9;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between icon and "About" text */
+}
+
+.icon {
+    filter: invert(85%);
+  height: 2em;
 }
 
 .example {
-  color: rgba(187,138,100,255);
-  float: right;
+  color: #3B1E54;
   display: inline-flex;
   justify-content: space-between;
-  margin-right: 5%;
   align-items: center;
+  margin: 0 auto;
   width: 400px;
-  font-size: 1.5em;
+  font-size: 1em;
+  font-family: sans-serif;
   text-decoration: none;
-  font-family: "cambriafnt";
   height: 50px;
+  display: flex;
+  gap: 20px; /* Space between links */
+  text-align: center; /* Center text inside the links */
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 700px) {
@@ -62,92 +77,6 @@ html {
   }
 }
 
-.text3 {
-  overflow: hidden;
-  min-height: 400px;
-}
-
-
-
-.text5 {
-  background-color: rgb(17,12,17);
-  height: 350px;
-  border-radius: 5px;
-  border-top-style: solid;
-  border-color: rgb(46,36,44);
-  border-top-width: 50px;
-  border-bottom-style: solid;
-  border-bottom-width: 50px;
-}
-
-.rline {
-  height: 300px;
-  display: flex;
-  border-left: 9px solid rgb(46,36,44);
-  justify-content: center;
-  align-items: center;
-  margin-left: 50%;
-}
-
-.i {
-  color: rgb(255, 224, 159);
-  font-family: "cambriafnt";
-  font-weight: normal;
-  text-align: center;
-  margin-top: 50px;
-  font-size: clamp(0em, 7vw, 1.5em);
-  text-align: center;
-  border: none;
-  width: 100%;
-  left: 25%;
-  height: 237px;
-  position: absolute;
-}
-
-.ie {
-  position: absolute;
-  color: rgb(255, 224, 159);
-  font-family: "cambriafnt";
-  font-weight: normal;
-  text-align: center;
-  margin-top: 50px;
-  font-size: clamp(0em, 7vw, 1.5em);
-  text-align: center;
-  border: none;
-  width: 100%;
-  height: 237px;
-  display: inline-block;
-}
-
-.iee {
-  position: absolute;
-  color: rgb(255, 224, 159);
-  font-family: "cambriafnt";
-  font-weight: normal;
-  text-align: center;
-  margin-top: 50px;
-  font-size: clamp(0em, 7vw, 1.5em);
-  text-align: center;
-  right: 25%;
-  border: none;
-  width: 100%;
-  height: 237px;
-  display: inline-block;
-}
-
-@media screen and (max-width: 700px) {
-  .i{
-    position: inherit;
-  }
-
-  .ie{
-    position: inherit;
-  }
-
-  .iee{
-    position: inherit;
-  }
-}
 
 .box3 {
   height: 200px;
@@ -157,39 +86,100 @@ html {
 }
 
 .topbar {
-  position: absolute;
+  position: fixed;
   z-index: 1;
-  background-color: rgb(48, 36, 23);
+  background-color: #404040;
   overflow: hidden;
+  justify-content: space-between; /* Aligns image and text separately */
   height: auto;
   width: 100vw;
   padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom-style: solid;
+  border-color: #0d0d0d;
+  border-bottom-width: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Keeps logo on the left and links on the right */
+}
+
+.buy-button {
+  background-color: #cccccc; /* Button color */
+  color: white; /* Text color */
+  border: none;
+  padding: 10px 20px;
+  margin-right: 3%;
+  border-radius: 12px; /* Rounded edges */
+  font-size: 1.2em;
+  font-family: 'customfont', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: rgba(13,13,13, 1);
+}
+
+.buy-button:hover {
+  background-color: #b3b3b3; /* Darker shade on hover */
 }
 
 .slideshow {
-  height: 400px;
+  z-index: 9999;
+  height: 670px;
   overflow: hidden;
   opacity: 0.9;
+  border-bottom-style: solid;
+  border-color: #0d0d0d;
+  border-bottom-width: 12px;
   background-color: black;
-  background-image: url("background.png");
+  background-image: url("bg2.png");
   background-size: cover;
-  background-position: center -200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-attachment: fixed;
 }
 
+.video1 {
+    width: 100%;
+    max-width: 45%; /* Optional: limits the video size */
+    height: auto;
+    opacity: 0.7;
+    border-radius: 1vh;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
 
+.chart {
+  width: 100%;
+  max-width: 45%; /* Optional: limits the video size */
+  height: auto;
+  opacity: 0.7;
+  border-radius: 1vh;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
 
+.text-box {
+    font-family: 'customfont';
+    padding: 20px;
+    max-width: 45%; /* Optional: limits the width of the text box */
+}
+.text2 {
+}
 .text1 {
   overflow: hidden;
-  background-repeat: repeat;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 400px;
+  border-radius: 5px;
+  border-top-style: solid;
+  border-color: #271438;
+  border-top-width: 8px;
+}
+
+.text1_inner {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
 }
 
 .twitlogo {
@@ -201,23 +191,11 @@ html {
 }
 
 .foot {
-  margin-top: 100px;
-  height: 150px;
   overflow: hidden;
   text-align: center;
+  margin-bottom: 100px;
 }
 
-.footi {
-  color: rgb(255, 224, 159);
-  font-family: "cambriafnt";
-  font-weight: normal;
-  text-align: center;
-  font-size: clamp(0em, 8vw, 1.5em);
-  margin-top: 1%;
-}
-.prefoot {
-  height: 200px;
-}
 
 .description {
   margin-top: 150px;
@@ -225,7 +203,24 @@ html {
   left: 50%;
   color: rgb(237, 224, 206);
   font-size: clamp(0em, 8vw, 1.5em);
-  font-family: sans-serif;
+  font-family: 'customfont', sans-serif;
+  display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 2.5%;
+}
+
+.description2 {
+  margin-top: 150px;
+  text-align: center;
+  left: 50%;
+  color: rgb(237, 224, 206);
+  font-size: clamp(0em, 8vw, 1.5em);
+  font-family: 'customfont', sans-serif;
+  display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 5%;
 }
 
 .quote {
@@ -241,16 +236,13 @@ html {
 .token {
   font-size: clamp(0em, 10vw, 2.5em);
   font-family: sans-serif;
-  color: rgba(251, 176, 64,255);
-  font-family: "cambriafnt";
-  font-weight: normal;
+  color: rgba(187,138,100,255);
   text-align: center;
 }
 .token2 {
   font-size: clamp(0em, 6vw, 1.5em);
-  color: rgb(255, 224, 159);
-  font-family: "cambriafnt";
-  font-weight: normal;
+  font-family: sans-serif;
+  color: rgb(237, 224, 206);
   text-align: center;
 }
 
@@ -264,7 +256,6 @@ html {
 .icon {
   width: 100%;
   max-width: 200px;
-  background-color: rgb(53,61,147);
   aspect-ratio: 1;
   display: inline-flex;
   align-items: center;
@@ -291,54 +282,22 @@ html {
 }
 
 .title {
-  color: rgba(251, 176, 64,255);
+  color: #3B1E54;
   text-align: center;
   display: inline-block;
-  font-size: clamp(0em, 10vw, 2.5em);
-  font-family: 'cambriafnt';
+  font-size: clamp(0em, 8vw, 2.5em);
+  font-family: sans-serif;
   font-weight: normal;
   text-decoration: none;
-  font-style: italic;
-}
-
-.title2 {
-  color: rgba(251, 176, 64,255);
-  text-align: center;
-  position: flex;
-  font-size: clamp(0em, 8vw, 4em);
-  font-family: "cambriafnt";
-  font-weight: normal;
-}
-
-.title3 {
-  margin-bottom: 50px;
-  color: rgba(251, 176, 64,255);
-  text-align: center;
-  position: flex;
-  font-size: clamp(0em, 8vw, 2em);
-  font-family: "cambriafnt";
-  font-weight: normal;
 }
 
 .descr {
-  margin-bottom: 75px;
-  color: rgb(255, 224, 159);
+  margin-bottom: 80px;
+  color: rgb(237, 224, 206);
   text-align: center;
-  position: flex;
   display: inline-block;
   font-size: clamp(0em, 8vw, 1.5em);
-  font-family: "cambriafnt";
-  font-weight: normal;
-}
-
-.descr2 {
-  margin-bottom: 100px;
-  line-height: 1em;
-  color: rgb(255, 224, 159);
-  text-align: center;
-  position: flex;
-  font-size: clamp(0em, 8vw, 1.5em);
-  font-family: "cambriafnt";
+  font-family: sans-serif;
   font-weight: normal;
 }
 
@@ -356,7 +315,7 @@ html {
 .pan {
   background-color: rgb(237, 224, 206);
   display: flex;
-  bottom: 70px;
+  bottom: 140px;
   color: rgb(96,80,82);
   font-size: clamp(0em, 8vw, 1.5em);
   align-items: center;
@@ -389,66 +348,145 @@ html {
   background-color: rgb(161, 127, 26)
 }
 
-.bord {
-  height: 50px;
-  margin-top: 95px;
-  background-size: auto;
-  background-image: url("borderneg.svg"), linear-gradient(to right, rgba(251, 176, 64, 0.9), rgba(243, 116, 67, 0.9));
-}
-
-.bord2 {
-  height: 50px;
-  bottom: 70px;
-  position: relative;
-  background-size: auto;
-  background-image: url("borderneg.svg"), linear-gradient(to right, rgba(251, 176, 64, 0.9), rgba(243, 116, 67, 0.9));
-}
-
 .pan3 {
-  cursor: pointer;
-  margin-top: 60px;
-  background-image: linear-gradient(to right, rgba(251, 176, 64, 1), rgba(243, 116, 67, 1));
-  color: rgb(48, 36, 23);
-  font-size: clamp(0em, 8vw, 2em);
+  margin-top: 195px;
+  background-color: rgba(15,16,16,255);
+  color: rgb(237, 224, 206);
+  font-size: clamp(0em, 8vw, 1.5em);
   border: none;
   width: 76%;
-  max-width: 370px;
-  height: 60px;
-  font-family: "cambriafnt";
-  font-style: italic;
+  max-width: 400px;
+  height: 65px;
+  font-family: sans-serif;
   transition: 200ms;
 }
 
-.pan5 {
-  cursor: pointer;
-  font-family: "cambriafnt";
-  font-style: italic;
-  background-image: linear-gradient(to right, rgba(251, 176, 64, 1), rgba(243, 116, 67, 1));
-  color: rgb(48, 36, 23);
-  font-size: clamp(0em, 8vw, 2em);
-  border: none;
-  width: 75%;
-  max-width: 370px;
-  height: 60px;
-  margin-top: 25px;
-  font-family: sans-serif;
-  transition: 200ms;
+.pan3:hover {
+  background-color: rgb(122, 36, 42);
 }
 
 .pan4 {
-  cursor: pointer;
-  font-family: "cambriafnt";
-  font-style: italic;
-  background-image: linear-gradient(to right, rgba(251, 176, 64, 1), rgba(243, 116, 67, 1));
-  color: rgb(48, 36, 23);
-  font-size: clamp(0em, 8vw, 2em);
+  background-color: rgba(15,16,16,255);
+  color: rgb(237, 224, 206);
+  font-size: clamp(0em, 8vw, 1.5em);
   border: none;
   width: 75%;
-  max-width: 370px;
-  height: 60px;
-  margin-top: 25px;
+  max-width: 400px;
+  height: 65px;
+  margin-top: 50px;
   font-family: sans-serif;
   transition: 200ms;
 }
 
-                                                                                                                                                                
+.pan4:hover {
+  background-color: rgb(122, 36, 42);
+}
+
+.wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	pointer-events: none;
+}
+.round {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #d9d9d9;
+	border: 5px solid #d9d9d9;
+	opacity: 0;
+	box-shadow: 0 0 100px #d9d9d9, 0 0 10px #d9d9d9, 0 0 20px #d9d9d9;
+	animation: animate 4s linear infinite, ani-2 2s linear infinite;
+}
+.round:nth-child(1) {
+	left: 5%;
+	animation-delay: 0.5s;
+}
+.round:nth-child(2) {
+	left: 65%;
+	animation-delay: 1s;
+}
+.round:nth-child(3) {
+	left: 90%;
+	animation-delay: 1.5s;
+}
+.round:nth-child(4) {
+	left: 18%;
+	animation-delay: 2s;
+}
+.round:nth-child(5) {
+	left: 93%;
+	animation-delay: 2.5s;
+}
+.round:nth-child(6) {
+	left: 52%;
+	animation-delay: 3s;
+}
+.round:nth-child(7) {
+	left: 65%;
+	animation-delay: 3.5s;
+}
+.round:nth-child(8) {
+	left: 35%;
+	animation-delay: 4s;
+}
+.round:nth-child(9) {
+	left: 85%;
+	animation-delay: 4.5s;
+}
+.round:nth-child(10) {
+	left: 45%;
+	animation-delay: 5s;
+}
+.round:nth-child(11) {
+	left: 36%;
+	animation-delay: 5.5s;
+}
+.round:nth-child(12) {
+	left: 72%;
+	animation-delay: 6s;
+}
+.round:nth-child(13) {
+	left: 14%;
+	animation-delay: 6.5s;
+}
+.round:nth-child(14) {
+	left: 70%;
+	animation-delay: 7s;
+}
+@keyframes animate {
+	0% {
+		top: 0;
+		opacity: 1;
+	}
+	20% {
+		top: 20%;
+		opacity: 0.8;
+	}
+	40% {
+		top: 40%;
+		opacity: 0.6;
+	}
+	60% {
+		top: 60%;
+		opacity: 0.4;
+	}
+	80% {
+		top: 80%;
+		opacity: 0.2;
+	}
+	100% {
+		top: 100%;
+		opacity: 0;
+	}
+}
+@keyframes ani-2 {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(2.5);
+	}
+}
