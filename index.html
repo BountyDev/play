@@ -9,6 +9,44 @@
     </head>
   </head>
   <body>
+    <div class="topbar">
+      <img src="playlogo.png" class="logo">
+      <h1 class="example">
+          <div class="icon-text">
+              <img src="chart.png" class="icon">
+              <a href="https://dexscreener.com/solana/3jxh5m7u8ajtx26jgd1acvgn2hhfssdbpdxhxajdkahb" class="e">Chart</a>
+          </div>
+          <div class="icon-text">
+              <img src="twitter.png" class="icon">
+              <a href="https://x.com/OnlyPlayOnSol" class="e">Twitter</a>
+          </div>
+          <div class="icon-text">
+              <img src="telegram.png" class="icon">
+              <a href="https://x.com/OnlyPlayOnSol" class="e">Telegram</a>
+          </div>
+          <div class="icon-text">
+              <img src="buy.png" class="icon">
+              <a href="#chart" class="e">Buy</a>
+          </div>
+      </h1>
+      <button class="buy-button">Buy $PLAY</button>
+      <!-- Dropdown menu icon -->
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <!-- Hidden dropdown menu -->
+      <div class="dropdown-menu">
+          <a href="https://dexscreener.com/solana/3jxh5m7u8ajtx26jgd1acvgn2hhfssdbpdxhxajdkahb" class="dropdown-link">Chart</a>
+          <a href="https://x.com/OnlyPlayOnSol" class="dropdown-link">Twitter</a>
+          <a href="https://x.com/OnlyPlayOnSol" class="dropdown-link">Telegram</a>
+          <a href="#chart" class="dropdown-link">Buy</a>
+      </div>
+  </div>
+    <script>
+      document.querySelector('.buy-button').addEventListener('click', function() {
+        document.querySelector('#chart').scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    </script>
     <div class="wrapper">
         <div class="round"></div>
         <div class="round"></div>
@@ -26,35 +64,6 @@
         <div class="round"></div>
         <div class="round"></div>
     </div>
-    <div class="topbar">
-      <img src="playlogo.png" class="logo">
-      <h1 class="example">
-        <div class="icon-text">
-           <img src="chart.png" class="icon">
-            <a href="https://dexscreener.com/solana/3jxh5m7u8ajtx26jgd1acvgn2hhfssdbpdxhxajdkahb" class="e">Chart</a>
-         </div>
-        <div class="icon-text">
-          <img src="twitter.png" class="icon">
-          <a href="https://x.com/OnlyPlayOnSol" class="e">Twitter</a>
-        </div>
-        <div class="icon-text">
-          <img src="telegram.png" class="icon">
-          <a href="https://x.com/OnlyPlayOnSol" class="e">Telegram</a>
-        </div>
-        <div class="icon-text">
-          <img src="buy.png" class="icon">
-          <a href="#chart" class="e">Buy</a>
-        </div>
-      </h1>
-      <button class="buy-button">Buy $PLAY</button>
-    </div>
-    <script>
-      document.querySelector('.buy-button').addEventListener('click', function() {
-        document.querySelector('#chart').scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    </script>
     <div class="bord">
       <h1></h1>
     </div>
