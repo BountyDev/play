@@ -283,6 +283,11 @@ html, body {
     max-width: 80%; /* Ensure video doesn't shrink */
     height: auto; /* Maintain aspect ratio */
   }
+
+  .chart {
+    max-width: 80%; /* Ensure video doesn't shrink */
+    height: auto; /* Maintain aspect ratio */    
+  }
 }
 
 .description2 {
