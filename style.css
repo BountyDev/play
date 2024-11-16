@@ -241,11 +241,6 @@ html, body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.text-box {
-  font-family: sans-serif;
-  padding: 20px;
-  max-width: 45%;
-}
 
 .description {
   margin-top: 150px;
@@ -258,6 +253,26 @@ html, body {
   justify-content: center;
   align-items: center;
   gap: 2.5%;
+}
+
+.text-box {
+  font-family: sans-serif;
+  padding: 20px;
+  max-width: 45%;
+}
+
+
+@media (max-width: 768px) {
+  .description {
+    flex-direction: column; /* Stack content vertically on mobile */
+    text-align: left; /* Align text left for better readability */
+    margin-top: 50px; /* Adjust margin on mobile */
+  }
+
+  .text-box {
+    max-width: 100%; /* Allow text-box to take full width on mobile */
+    padding: 10px; /* Reduce padding for better fit */
+  }
 }
 
 .description2 {
