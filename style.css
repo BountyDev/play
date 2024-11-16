@@ -214,6 +214,16 @@ html, body {
   align-items: center;
 }
 
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .slideshow {
+    height: auto; /* Adjust height to fit content or screen */
+    width: 100vw; /* Make sure it takes up the full width of the viewport */
+    background-size: contain; /* Ensures the image scales within the container */
+  }
+}
+
 .video1 {
   width: 100%;
   max-width: 45%;
