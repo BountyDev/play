@@ -393,3 +393,10 @@ html, body {
 		transform: scale(2.5);
 	}
 }
+
+/* Hide the wrapper on mobile and tablets */
+@media (max-width: 768px) {
+  .wrapper {
+    display: none; /* Completely hides the element */
+  }
+}
