@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" href="style.css">
       <script src="script.js"></script>
+      <script src="menu.js"></script>
       <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
@@ -13,28 +14,33 @@
   </head>
   <body>
           <script src="script.js"></script>
-    <div class="topbar">
-      <img src="playlogo.png" class="logo">
-      <div class="example">
-        <div class="icon-text">
-           <img src="chart.png" class="icon">
-            <a href="https://dexscreener.com/solana/3jxh5m7u8ajtx26jgd1acvgn2hhfssdbpdxhxajdkahb" class="e">Chart</a>
-         </div>
-        <div class="icon-text">
-          <img src="twitter.png" class="icon">
-          <a href="https://x.com/OnlyPlayOnSol" class="e">Twitter</a>
-        </div>
-        <div class="icon-text">
-          <img src="telegram.png" class="icon">
-          <a href="https://x.com/OnlyPlayOnSol" class="e">Telegram</a>
-        </div>
-        <div class="icon-text">
-          <img src="buy.png" class="icon">
-          <a href="#chart" class="e">Buy</a>
-        </div>
-      </div>
-      <button class="buy-button">Buy $PLAY</button>
-    </div>
+          <script src="menu.js"></script>
+          <div class="topbar">
+            <img src="playlogo.png" class="logo">
+            <div class="menu-icon">
+              <img src="menu.png" alt="menu">
+            </div>
+            <div class="example">
+              <div class="icon-text">
+                <img src="chart.png" class="icon">
+                <a href="https://dexscreener.com/solana/3jxh5m7u8ajtx26jgd1acvgn2hhfssdbpdxhxajdkahb" class="e">Chart</a>
+              </div>
+              <div class="icon-text">
+                <img src="twitter.png" class="icon">
+                <a href="https://x.com/OnlyPlayOnSol" class="e">Twitter</a>
+              </div>
+              <div class="icon-text">
+                <img src="telegram.png" class="icon">
+                <a href="https://x.com/OnlyPlayOnSol" class="e">Telegram</a>
+              </div>
+              <div class="icon-text">
+                <img src="buy.png" class="icon">
+                <a href="#chart" class="e">Buy</a>
+              </div>
+            </div>
+            <button class="buy-button">Buy $PLAY</button>
+          </div>
+
     <script>
       document.querySelector('.buy-button').addEventListener('click', function() {
         document.querySelector('#chart').scrollIntoView({
