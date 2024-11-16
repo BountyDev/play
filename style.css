@@ -1,3 +1,8 @@
+.new-amsterdam-regular {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 
 body {
@@ -90,13 +95,27 @@ html, body {
   align-items: center;
   margin: 0 auto;
   width: 400px;
-  font-size: clamp(1em, 4vw, 1.5em);
+  font-size: clamp(1em, 4vw, 1.25em);
   font-family: sans-serif;
   height: 50px;
   display: flex;
   gap: 20px;
   text-align: center;
 }
+
+/* Initial hidden state */
+[data-animation] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When in view */
+[data-animation].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 @media screen and (max-width: 700px) {
   .example {
@@ -111,7 +130,7 @@ html, body {
 .topbar {
   position: fixed;
   z-index: 1;
-  background-color: #404040;
+  background-color: rgba(13,13,13, 1);
   overflow: hidden;
   justify-content: space-between;
   height: auto;
@@ -187,9 +206,10 @@ html, body {
 .description {
   margin-top: 150px;
   text-align: center;
+  margin-bottom: 300px;
   color: rgb(237, 224, 206);
   font-size: clamp(1em, 6vw, 1.5em);
-  font-family: sans-serif;
+  font-family: "new-amsterdam-regular";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,6 +218,7 @@ html, body {
 
 .description2 {
   margin-top: 150px;
+  margin-bottom: 300px;
   text-align: center;
   color: rgb(237, 224, 206);
   font-size: clamp(1em, 6vw, 1.5em);
@@ -361,63 +382,4 @@ html, body {
 	50% {
 		transform: scale(2.5);
 	}
-}
-
-/* General styles */
-.topbar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Hide the dropdown menu and menu icon by default */
-.menu-icon, .dropdown-menu {
-    display: none;
-}
-
-/* Show Buy button by default */
-.buy-button {
-    display: inline-block;
-}
-
-/* Media query for mobile screens */
-@media (max-width: 768px) {
-    .buy-button {
-        display: none; /* Hide Buy button */
-    }
-
-    .menu-icon {
-        display: block; /* Show menu icon */
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        overflow: hidden;
-    }
-
-    .dropdown-link {
-        display: block;
-        padding: 10px;
-        text-align: left;
-        color: black;
-        text-decoration: none;
-    }
-
-    .dropdown-link:hover {
-        background-color: #f0f0f0;
-    }
-}
-
-/* Toggle dropdown menu on mobile */
-.show-dropdown {
-    display: block;
 }

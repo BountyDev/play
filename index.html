@@ -5,41 +5,36 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" href="style.css">
       <script src="script.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
   </head>
   <body>
+          <script src="script.js"></script>
     <div class="topbar">
       <img src="playlogo.png" class="logo">
-      <h1 class="example">
-          <div class="icon-text">
-              <img src="chart.png" class="icon">
-              <a href="https://dexscreener.com/solana/3jxh5m7u8ajtx26jgd1acvgn2hhfssdbpdxhxajdkahb" class="e">Chart</a>
-          </div>
-          <div class="icon-text">
-              <img src="twitter.png" class="icon">
-              <a href="https://x.com/OnlyPlayOnSol" class="e">Twitter</a>
-          </div>
-          <div class="icon-text">
-              <img src="telegram.png" class="icon">
-              <a href="https://x.com/OnlyPlayOnSol" class="e">Telegram</a>
-          </div>
-          <div class="icon-text">
-              <img src="buy.png" class="icon">
-              <a href="#chart" class="e">Buy</a>
-          </div>
-      </h1>
-      <button class="buy-button">Buy $PLAY</button>
-      <!-- Dropdown menu icon -->
-      <div class="menu-icon" onclick="toggleMenu()">☰</div>
-      <!-- Hidden dropdown menu -->
-      <div class="dropdown-menu">
-          <a href="https://dexscreener.com/solana/3jxh5m7u8ajtx26jgd1acvgn2hhfssdbpdxhxajdkahb" class="dropdown-link">Chart</a>
-          <a href="https://x.com/OnlyPlayOnSol" class="dropdown-link">Twitter</a>
-          <a href="https://x.com/OnlyPlayOnSol" class="dropdown-link">Telegram</a>
-          <a href="#chart" class="dropdown-link">Buy</a>
+      <div class="example">
+        <div class="icon-text">
+           <img src="chart.png" class="icon">
+            <a href="https://dexscreener.com/solana/3jxh5m7u8ajtx26jgd1acvgn2hhfssdbpdxhxajdkahb" class="e">Chart</a>
+         </div>
+        <div class="icon-text">
+          <img src="twitter.png" class="icon">
+          <a href="https://x.com/OnlyPlayOnSol" class="e">Twitter</a>
+        </div>
+        <div class="icon-text">
+          <img src="telegram.png" class="icon">
+          <a href="https://x.com/OnlyPlayOnSol" class="e">Telegram</a>
+        </div>
+        <div class="icon-text">
+          <img src="buy.png" class="icon">
+          <a href="#chart" class="e">Buy</a>
+        </div>
       </div>
-  </div>
+      <button class="buy-button">Buy $PLAY</button>
+    </div>
     <script>
       document.querySelector('.buy-button').addEventListener('click', function() {
         document.querySelector('#chart').scrollIntoView({
@@ -47,6 +42,9 @@
         });
       });
     </script>
+    <div class="slideshow-container">
+
+    </div>
     <div class="wrapper">
         <div class="round"></div>
         <div class="round"></div>
@@ -70,7 +68,7 @@
     <div class="slideshow" id="slid">
 
     </div>
-    <div class="description">
+    <div class="description" data-animation>
       <video class="video1" autoplay muted loop>
           <source src="basic.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -80,7 +78,7 @@
             <p>$PLAY represents the power of conviction and the belief in your choices. One decision, one shot, can change your life, proving you trust your judgment and stand by your choices.<br><br>While money motivates us, being right often holds even greater value. Committing to your play shows confidence in your ability to navigate life’s challenges.<br><br>In this community, fear has no place. Great players act with full conviction and no regrets, shaping their future with every bold move. Full send it!</p>
         </div>
     </div>
-    <div class="description2">
+    <div class="description2" data-animation>
         <div class="text-box">
             <h1>Tokenomics</h1>
             <p>0% TAX <br><br>CTO<br><br>1B SUPPLY<br><br>MINT REVOKED</p>
@@ -90,7 +88,7 @@
             Your browser does not support the video tag.
         </video>
     </div>
-    <div class="description">
+    <div class="description" data-animation>
       <div class="chart" id="chart">
 <style>#dexscreener-embed{position:relative;width:100%;padding-bottom:125%;}@media(min-width:1400px){#dexscreener-embed{padding-bottom:65%;}}#dexscreener-embed iframe{position:absolute;width:100%;height:100%;top:0;left:0;border:0;}</style><div id="dexscreener-embed"><iframe src="https://dexscreener.com/solana/3JXh5M7u8AJTX26jGD1aCvGn2HHFssDbPdXHXAJdkAHB?embed=1&theme=dark&trades=0&info=0"></iframe></div>
       </div>

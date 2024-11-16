@@ -23,7 +23,22 @@ $(document).ready(function(){
   });
 });
 
-function toggleMenu() {
-    const dropdownMenu = document.querySelector(".dropdown-menu");
-    dropdownMenu.classList.toggle("show-dropdown");
-}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const animatedElements = document.querySelectorAll("[data-animation]");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        } else {
+          entry.target.classList.remove("in-view");
+        }
+      });
+    },
+    { threshold: 0.1 } // Trigger when 10% of the element is visible
+  );
+
+  animatedElements.forEach((el) => observer.observe(el));
+});
