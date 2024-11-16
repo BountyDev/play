@@ -147,7 +147,6 @@ html, body {
   /* Show only logo and hamburger menu by default */
   .menu-icon {
     display: block;
-    filter: grayscale(0%) brightness(100%);
   }
 
   .example, .buy-button {
