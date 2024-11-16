@@ -265,26 +265,6 @@ html, body {
   margin-bottom: 100px;
 }
 
-@media screen and (max-width: 700px) {
-  .foot {
-    margin-bottom: 50px;
-  }
-
-  .slideshow {
-    height: auto;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .video1 {
-    max-width: 80%;
-  }
-
-  .chart {
-    max-width: 80%;
-  }
-}
-
 /* Mobile Responsiveness */
 @media screen and (max-width: 700px) {
   .description, .description2 {
