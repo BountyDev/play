@@ -222,6 +222,7 @@ html, body {
     width: 100vw; /* Make sure it takes up the full width of the viewport */
     background-size: contain; /* Ensures the image scales within the container */
   }
+
 }
 
 .video1 {
@@ -413,5 +414,11 @@ html, body {
 @media (max-width: 768px) {
   .wrapper {
     display: none; /* Completely hides the element */
+  }
+}
+
+@media (max-width: 768px) {
+  .buy-button {
+    display: none; /* Hides the button on mobile devices */
   }
 }
