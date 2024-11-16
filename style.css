@@ -214,7 +214,14 @@ html, body {
   align-items: center;
 }
 
-
+@media (max-width: 768px) {
+  .slideshow {
+    height: auto; /* Adjust the height for mobile devices */
+    min-height: 300px; /* You can adjust the minimum height */
+    background-size: contain; /* Ensure the image scales properly */
+    background-position: center center; /* Center the background image */
+  }
+}
 
 .video1 {
   width: 100%;
