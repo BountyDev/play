@@ -286,7 +286,7 @@ html, body {
 
   .chart {
     max-width: 80%; /* Ensure video doesn't shrink */
-    height: auto; /* Maintain aspect ratio */    
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
@@ -301,6 +301,34 @@ html, body {
   justify-content: center;
   align-items: center;
   gap: 5%;
+}
+
+.text-box2 {
+  font-family: "Akira", sans-serif;;
+  padding: 20px;
+  max-width: 45%;
+  text-align: center; /* Align text to the left */
+}
+
+@media (max-width: 768px) {
+  .description2 {
+    flex-direction: column; /* Stack content vertically on mobile */
+    text-align: left; /* Align text left for readability */
+    margin-top: 50px; /* Adjust margin for mobile */
+    gap: 20px; /* Add space between the text and video */
+  }
+
+  .text-box2 {
+    max-width: 100%; /* Ensure text box takes full width on mobile */
+    padding: 10px; /* Reduce padding for better fit */
+    order: 2; /* Make sure the text comes after the video on mobile */
+  }
+
+  .video2 {
+    max-width: 100%; /* Ensure video does not shrink */
+    height: auto; /* Maintain aspect ratio of the video */
+    order: 1; /* Make sure the video appears above the text on mobile */
+  }
 }
 
 .foot {
