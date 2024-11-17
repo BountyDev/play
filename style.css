@@ -145,8 +145,8 @@ html, body {
   height: 30px;
 }
 @media (max-width: 768px) {
-  .menu-icon {
-    display: block; /* Show the menu icon on mobile */
+  /*.menu-icon {
+    display: block;  Show the menu icon on mobile
     position: absolute;
     right: 15px;
     top: 15px;
@@ -157,7 +157,7 @@ html, body {
     height: 30px;
     width: 30px;
     cursor: pointer;
-  }
+  }*/
 
   /* Hide the menu by default */
   .example {
@@ -290,16 +290,43 @@ html, body {
   }
 }
 
+.copy-ca-container {
+  margin-top: 20px; /* Space between text and button */
+  text-align: center; /* Center-align the button horizontally */
+  width: 100%; /* Ensure the container spans full width for centering */
+}
+
+#copy-ca {
+  padding: 10px 20px;
+  background-color: #007BFF; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#copy-ca:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+#copy-feedback {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
 .description2 {
   margin-top: 150px;
   margin-bottom: 300px;
   text-align: center;
   color: rgb(237, 224, 206);
-  font-size: clamp(1em, 6vw, 1.5em);
+  font-size: clamp(1em, 6vw, 1em);
   font-family: sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
   gap: 5%;
 }
 
@@ -329,6 +356,13 @@ html, body {
     height: auto; /* Maintain aspect ratio of the video */
     order: 1; /* Make sure the video appears above the text on mobile */
   }
+  .copy-ca-container {
+  margin-top: 20px; /* Add space between the text and the button */
+}
+
+#copy-ca {
+  font-size: 14px; /* Adjust button font size on mobile */
+}
 }
 
 .foot {

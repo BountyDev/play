@@ -37,8 +37,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.1 } // Trigger when 10% of the element is visible
+    { threshold: 0.25 } // Trigger when 10% of the element is visible
   );
 
   animatedElements.forEach((el) => observer.observe(el));
 });
+
+function copyCA() {
+    // The contract address to copy
+    const contractAddress = "DoEhjCRVsDwEcTw3UQPGXRJTTMHGaGT7fhMxtrpKpump";
+
+    // Create a temporary textarea element to copy the address
+    const tempInput = document.createElement("textarea");
+    tempInput.value = contractAddress;
+    document.body.appendChild(tempInput);
+
+    // Select the text and copy it to the clipboard
+    tempInput.select();
+    document.execCommand("copy");
+
+    // Remove the temporary input element from the DOM
+    document.body.removeChild(tempInput);
+
+    // Show feedback that the address has been copied
+    const feedback = document.getElementById("copy-feedback");
+    feedback.style.display = "inline"; // Display "Copied!" message
+    setTimeout(() => {
+        feedback.style.display = "none"; // Hide it after 2 seconds
+    }, 2000);
+}
